@@ -1,0 +1,116 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Thu Apr 13 00:39:18 2023
+| Host         : LAPTOP-NF4J7LE5 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_SRT_control_sets_placed.rpt
+| Design       : top_SRT
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    38 |
+|    Minimum number of control sets                        |    38 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    74 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    38 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |    12 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     4 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    17 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            5 |
+| No           | No                    | Yes                    |             154 |           80 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              13 |            6 |
+| Yes          | No                    | Yes                    |             478 |          156 |
+| Yes          | Yes                   | No                     |              81 |           24 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+----------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+|     Clock Signal     |                          Enable Signal                         |                         Set/Reset Signal                        | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+----------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_TX/txd_i_2_n_0                              | u_sdu_dm/SDU_wyl/u_TX/txd_i_1_n_0                               |                1 |              1 |         1.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/cnt[3]_i_1_n_0                   | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/FSM_onehot_curr_state_reg_n_0_[0] |                1 |              4 |         4.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_PRINT/d_tx[5]_i_1_n_0                 | u_sdu_dm/SDU_wyl/u_DCP/u_PRINT/d_tx[7]_i_1_n_0                  |                2 |              4 |         2.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_PRINT/d_tx[5]_i_1_n_0                 |                                                                 |                3 |              4 |         1.33 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_RX/sir/cntc[3]_i_1_n_0                      | u_sdu_dm/SDU_wyl/u_RX/sir/cntc                                  |                1 |              4 |         4.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_L/count_DATA[4]_i_1__0_n_0        | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG       | u_SRT/i[4]_i_1_n_0                                             | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG       | u_SRT/j[4]_i_1_n_0                                             | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                2 |              5 |         2.50 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_PRINT/cnt[4]_i_2__0_n_0               | u_sdu_dm/SDU_wyl/u_DCP/u_PRINT/cnt[4]_i_1_n_0                   |                2 |              5 |         2.50 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_TX/cntb[4]_i_1_n_0                          | u_sdu_dm/SDU_wyl/u_TX/cntc[5]_i_1_n_0                           |                1 |              5 |         5.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_L/addr_L[4]_i_1_n_0               | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                2 |              5 |         2.50 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_T/FSM_sequential_CS[4]_i_1_n_0    | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                3 |              5 |         1.67 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_R/count_DATA                      | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                1 |              5 |         5.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_TX/cntc[5]_i_2_n_0                          | u_sdu_dm/SDU_wyl/u_TX/cntc[5]_i_1_n_0                           |                2 |              6 |         3.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/FSM_onehot_curr_state[5]_i_1_n_0 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                3 |              6 |         2.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/FSM_onehot_curr_state_reg[1]_1   | u_sdu_dm/SDU_wyl/u_DCP/FSM_onehot_curr_state_reg[0]_0           |                4 |              7 |         1.75 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/din_rx[31]_i_2_n_0               | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/FSM_onehot_curr_state_reg_n_0_[0] |                3 |              8 |         2.67 |
+|  SDU_wyl/clk_9600x16 |                                                                |                                                                 |                5 |              8 |         1.60 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_RX/sir/E[0]                                 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                2 |              8 |         4.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_TX/SOR[8]_i_1_n_0                           |                                                                 |                3 |              9 |         3.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_RX/sir/SIR[8]_i_2_n_0                       | u_sdu_dm/SDU_wyl/u_RX/sir/cntc                                  |                2 |             13 |         6.50 |
+|  clk_IBUF_BUFG       | u_SRT/u_PS/cstate_reg[0]                                       | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                4 |             16 |         4.00 |
+|  clk_IBUF_BUFG       |                                                                | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                9 |             18 |         2.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/din_rx[31]_i_2_n_0               | u_sdu_dm/SDU_wyl/u_DCP/u_SCAN/din_rx[31]_i_1_n_0                |                5 |             24 |         4.80 |
+|  clk_IBUF_BUFG       | u_SRT/u_DB/count_n[0]_i_1_n_0                                  | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                6 |             24 |         4.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_I/cur_addr                        | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               13 |             32 |         2.46 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_D/last_addr_D                     | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               13 |             32 |         2.46 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_D/cur_addr                        | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               13 |             32 |         2.46 |
+|  clk_IBUF_BUFG       | u_SRT/en_size                                                  | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                8 |             32 |         4.00 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_I/last_addr_I                     | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               14 |             32 |         2.29 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/reg_B_3                         | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                9 |             32 |         3.56 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_L/data_L[31]_i_1_n_0              | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               12 |             32 |         2.67 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/reg_B_2                         | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |                9 |             32 |         3.56 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/reg_B_1                         | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               10 |             32 |         3.20 |
+|  SDU_wyl/clk_9600x16 | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_R/cur_addr                        | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               10 |             32 |         3.20 |
+|  u_SRT/clk_a_BUFG    | u_SRT/dmg1_i_44_n_0                                            |                                                                 |                8 |             64 |         8.00 |
+|  clk_IBUF_BUFG       | u_SRT/en_td1                                                   | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               19 |             74 |         3.89 |
+|  SDU_wyl/clk_9600x16 |                                                                | u_sdu_dm/SDU_wyl/u_DCP/u_DCP_B/rstn                             |               71 |            136 |         1.92 |
++----------------------+----------------------------------------------------------------+-----------------------------------------------------------------+------------------+----------------+--------------+
+
+
