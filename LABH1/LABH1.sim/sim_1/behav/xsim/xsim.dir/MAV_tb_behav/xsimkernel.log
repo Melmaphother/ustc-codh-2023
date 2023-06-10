@@ -1,0 +1,7 @@
+Running: xsim.dir/MAV_tb_behav/xsimk.exe -simmode gui -wdb MAV_tb_behav.wdb -simrunnum 0 -socket 53682
+Design successfully loaded
+Design Loading Memory Usage: 8548 KB (Peak: 8548 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 9156 KB (Peak: 9156 KB)
+Simulation CPU Usage: 0 ms

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1680412472">
+  <File Type="ROUTE-PWR" Name="MAV_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="MAV.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="MAV_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="MAV_reports.tcl"/>
+  <File Type="BITSTR-MSK" Name="MAV.msk"/>
+  <File Type="ROUTE-CLK" Name="MAV_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="MAV.vdi"/>
+  <File Type="BG-BIT" Name="MAV.bit"/>
+  <File Type="BG-DRC" Name="MAV.drc"/>
+  <File Type="BG-BGN" Name="MAV.bgn"/>
+  <File Type="BG-BIN" Name="MAV.bin"/>
+  <File Type="BITSTR-RBT" Name="MAV.rbt"/>
+  <File Type="BITSTR-NKY" Name="MAV.nky"/>
+  <File Type="BITSTR-BMM" Name="MAV_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="MAV.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="MAV_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-SYSDEF" Name="MAV.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="MAV_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="MAV.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="OPT-DRC" Name="MAV_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="MAV.hwdef"/>
+  <File Type="PLACE-IO" Name="MAV_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="MAV_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="MAV_utilization_placed.pb"/>
+  <File Type="ROUTE-RQS" Name="MAV_routed.rqs"/>
+  <File Type="PLACE-CTRL" Name="MAV_control_sets_placed.rpt"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="MAV_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="ROUTE-DRC" Name="MAV_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="MAV_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="MAV_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="MAV_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="MAV_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="MAV_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="MAV_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="MAV_routed_bb.dcp"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="MAV_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="MAV_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="MAV_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-BUS-SKEW" Name="MAV_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="MAV_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="MAV_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="MAV_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="MAV_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="MAV_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="MAV_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="MAV_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="MAV_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="MAV_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-DRC-RPX" Name="MAV_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="MAV_methodology_drc_routed.rpx"/>
+  <File Type="PDI-FILE" Name="MAV.pdi"/>
+  <File Type="RCFI_FILE" Name="MAV.rcfi"/>
+  <File Type="CFI_FILE" Name="MAV.cfi"/>
+  <File Type="RNPI_FILE" Name="MAV.rnpi"/>
+  <File Type="NPI_FILE" Name="MAV.npi"/>
+  <File Type="RBD_FILE" Name="MAV.rbd"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="MAV_postroute_physopted.rqs"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ALU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/DB.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PS.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/Register.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux_2_to_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/mux_4_to_1.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MAV.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="MAV"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/LABH1_xdc.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/MAV.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
+  </Strategy>
+</GenRun>
