@@ -1,0 +1,701 @@
+
+*** Running vivado
+    with args -log SDU_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source SDU_top.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source SDU_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental F:/COD_Projects/LABH4/LABH4.srcs/utils_1/imports/synth_1/SDU_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from F:/COD_Projects/LABH4/LABH4.srcs/utils_1/imports/synth_1/SDU_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top SDU_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1144
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1324.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'SDU_top' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SDU_top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Top' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Top.v:35]
+INFO: [Synth 8-6157] synthesizing module 'PC' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Ins_Mem' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Ins_Mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'inst_mem' [F:/COD_Projects/LABH4/LABH4.runs/synth_1/.Xil/Vivado-2824-LAPTOP-NF4J7LE5/realtime/inst_mem_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'inst_mem' (0#1) [F:/COD_Projects/LABH4/LABH4.runs/synth_1/.Xil/Vivado-2824-LAPTOP-NF4J7LE5/realtime/inst_mem_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Ins_Mem' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Ins_Mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Mux' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Mux' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Mux.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Registers' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Registers.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Registers' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Registers.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ImmGen' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/ImmGen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ImmGen' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/ImmGen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Control' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Control.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'Control' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX_3_1' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/MUX_3_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_3_1' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/MUX_3_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Add' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Add.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Add' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Add.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'is_peripheral' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/is_peripheral.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'is_peripheral' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/is_peripheral.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Cond' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Branch_Cond.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Branch_Cond.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Cond' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Branch_Cond.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Data_Mem' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Data_Mem.v:25]
+INFO: [Synth 8-6157] synthesizing module 'data_mem' [F:/COD_Projects/LABH4/LABH4.runs/synth_1/.Xil/Vivado-2824-LAPTOP-NF4J7LE5/realtime/data_mem_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'data_mem' (0#1) [F:/COD_Projects/LABH4/LABH4.runs/synth_1/.Xil/Vivado-2824-LAPTOP-NF4J7LE5/realtime/data_mem_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Data_Mem' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Data_Mem.v:25]
+INFO: [Synth 8-6157] synthesizing module 'Led' [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Led' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Led.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [F:/COD_Projects/LABH4/LABH4.srcs/sources_1/new/Top.v:35]
+INFO: [Synth 8-6157] synthesizing module 'SDU' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SDU.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DIV_RX_CLK' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DIV_RX_CLK.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DIV_RX_CLK' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DIV_RX_CLK.v:1]
+INFO: [Synth 8-6157] synthesizing module 'RX' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/RX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SIR' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SIR.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SIR' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SIR.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RX' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/RX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TX' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/TX.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'TX' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/TX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DCP' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SCAN' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SCAN.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SCAN' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SCAN.v:3]
+INFO: [Synth 8-6157] synthesizing module 'PRINT' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/PRINT.v:3]
+INFO: [Synth 8-6157] synthesizing module 'H2C' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/H2C.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'H2C' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/H2C.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'PRINT' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/PRINT.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DCP_D' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_D.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_D' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_D.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DCP_I' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_I.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_I' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_I.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DCP_P' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_P.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_P.v:370]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_P' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_P.v:4]
+WARNING: [Synth 8-689] width (1) of port connection 'cs' does not match port width (5) of module 'DCP_P' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP.v:257]
+INFO: [Synth 8-6157] synthesizing module 'DCP_T' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_T.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_T.v:402]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_T' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_T.v:4]
+INFO: [Synth 8-6157] synthesizing module 'DCP_B' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_B.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_B.v:51]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_B.v:118]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_B' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_B.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DCP_G' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_G.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_G.v:382]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_G' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_G.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DCP_R' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_R.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_R' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_R.v:1]
+INFO: [Synth 8-6157] synthesizing module 'DCP_L' [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_L.v:2]
+INFO: [Synth 8-155] case statement is not full and has no default [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_L.v:165]
+INFO: [Synth 8-6155] done synthesizing module 'DCP_L' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP_L.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'DCP' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/DCP.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SDU' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SDU.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SDU_top' (0#1) [F:/COD_Projects/LABH4/SDU-SC_cwyl/new/SDU_top.v:23]
+WARNING: [Synth 8-7129] Port flag_rx in module DCP_G is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[31] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[30] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[29] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[28] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[27] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[26] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[25] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[24] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[23] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[22] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[21] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[20] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[19] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[18] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[17] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port busB[16] in module Led is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[31] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[30] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[29] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[28] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[27] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[26] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[25] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[24] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[23] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[22] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[21] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[20] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[19] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[18] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[17] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[16] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[15] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[14] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[13] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[12] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[11] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[10] in module Data_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[31] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[30] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[29] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[28] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[27] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[26] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[25] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[24] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[23] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[22] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[21] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[20] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[19] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[18] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[17] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[16] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[15] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[14] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[13] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[12] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[11] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[10] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[9] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[8] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[7] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[1] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[0] in module is_peripheral is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Op[1] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Op[0] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[6] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[4] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[3] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[2] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[1] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[0] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[6] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[5] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[4] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[3] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[2] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[1] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[0] in module ImmGen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[31] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[30] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[29] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[28] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[27] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[26] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[25] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[24] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[23] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[22] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[21] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[20] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[19] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[18] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[17] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[16] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[15] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[14] in module Ins_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[13] in module Ins_Mem is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1324.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1324.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1324.605 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 1324.605 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/COD_Projects/LABH4/LABH4.gen/sources_1/ip/inst_mem/inst_mem/inst_mem_in_context.xdc] for cell 'CPU/u_Ins_Mem/u_inst_mem'
+Finished Parsing XDC File [f:/COD_Projects/LABH4/LABH4.gen/sources_1/ip/inst_mem/inst_mem/inst_mem_in_context.xdc] for cell 'CPU/u_Ins_Mem/u_inst_mem'
+Parsing XDC File [f:/COD_Projects/LABH4/LABH4.gen/sources_1/ip/data_mem/data_mem/data_mem_in_context.xdc] for cell 'CPU/u_Data_Mem/u_data_mem'
+Finished Parsing XDC File [f:/COD_Projects/LABH4/LABH4.gen/sources_1/ip/data_mem/data_mem/data_mem_in_context.xdc] for cell 'CPU/u_Data_Mem/u_data_mem'
+Parsing XDC File [F:/COD_Projects/LABH4/LABH4.srcs/constrs_1/new/SDU_Top_xdc.xdc]
+Finished Parsing XDC File [F:/COD_Projects/LABH4/LABH4.srcs/constrs_1/new/SDU_Top_xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [F:/COD_Projects/LABH4/LABH4.srcs/constrs_1/new/SDU_Top_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/SDU_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/SDU_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1368.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1368.773 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for CPU/u_Ins_Mem/u_inst_mem. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for CPU/u_Data_Mem/u_data_mem. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:17 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'SIR'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'TX'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'SCAN'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'PRINT'
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'DCP_D'
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'DCP_I'
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'DCP_T'
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'DCP_B'
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'DCP_R'
+INFO: [Synth 8-802] inferred FSM for state register 'CS_reg' in module 'DCP_L'
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'DCP'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                              000 |                              000
+                  iSTATE |                              001 |                              001
+                 iSTATE3 |                              010 |                              010
+                 iSTATE1 |                              011 |                              011
+                 iSTATE2 |                              100 |                              100
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'SIR'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                              000
+                   START |                               01 |                              001
+                    SEND |                               10 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'TX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                           000001 |                              000
+                 iSTATE1 |                           000010 |                              010
+                 iSTATE3 |                           000100 |                              101
+                 iSTATE0 |                           001000 |                              011
+                 iSTATE2 |                           010000 |                              001
+                 iSTATE4 |                           100000 |                              100
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'one-hot' in module 'SCAN'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                              000 |                              000
+                    BYTE |                              001 |                              001
+                    WORD |                              010 |                              010
+                     TMP |                              011 |                              110
+                    WAIT |                              100 |                              100
+                     ACK |                              101 |                              101
+                   SPACE |                              110 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'PRINT'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                         00000001 |                              000
+                    SCAN |                         00000010 |                              001
+               PRINT_INF |                         00000100 |                              010
+                  PRINTA |                         00001000 |                              100
+               PRINT_MAO |                         00010000 |                              011
+                    DATA |                         00100000 |                              101
+                  PRINTD |                         01000000 |                              110
+                  FINISH |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'one-hot' in module 'DCP_D'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                         00000001 |                              000
+                    SCAN |                         00000010 |                              001
+               PRINT_INF |                         00000100 |                              010
+                  PRINTA |                         00001000 |                              100
+               PRINT_MAO |                         00010000 |                              011
+                    DATA |                         00100000 |                              101
+                  PRINTD |                         01000000 |                              110
+                  FINISH |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'one-hot' in module 'DCP_I'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                            00000 |                            00000
+                 CLK_RST |                            00001 |                            10110
+                  CLK_ON |                            00010 |                            10100
+                 CLK_OFF |                            00011 |                            10101
+               PRINT_NPC |                            00100 |                            00001
+          PRINT_NPC_DATA |                            00101 |                            00010
+                PRINT_PC |                            00110 |                            00011
+           PRINT_PC_DATA |                            00111 |                            00100
+                PRINT_IR |                            01000 |                            00101
+           PRINT_IR_DATA |                            01001 |                            00110
+               PRINT_CTL |                            01010 |                            00111
+          PRINT_CTL_DATA |                            01011 |                            01000
+                 PRINT_A |                            01100 |                            01001
+            PRINT_A_DATA |                            01101 |                            01010
+                 PRINT_B |                            01110 |                            01011
+            PRINT_B_DATA |                            01111 |                            01100
+               PRINT_IMM |                            10000 |                            01101
+          PRINT_IMM_DATA |                            10001 |                            01110
+                 PRINT_Y |                            10010 |                            01111
+            PRINT_Y_DATA |                            10011 |                            10000
+               PRINT_MDR |                            10100 |                            10001
+          PRINT_MDR_DATA |                            10101 |                            10010
+                  FINISH |                            10110 |                            10011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'DCP_T'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                              000 |                              000
+                    SCAN |                              001 |                              001
+                  UPDATE |                              010 |                              010
+                PRINT_B1 |                              011 |                              011
+                PRINT_B2 |                              100 |                              100
+                  FINISH |                              101 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'DCP_B'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                              000 |                              000
+                  PRINTR |                              001 |                              001
+                  PRINTA |                              010 |                              010
+                PRINTMAO |                              011 |                              011
+                    DATA |                              100 |                              100
+                  PRINTD |                              101 |                              101
+                     ADD |                              110 |                              110
+                  FINISH |                              111 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'DCP_R'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                              000 |                              000
+                   SCAN1 |                              001 |                              001
+                   SCAN2 |                              010 |                              010
+            PRINT_FINISH |                              011 |                              101
+                  FINISH |                              100 |                              110
+                   INPUT |                              101 |                              011
+                    WAIT |                              110 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CS_reg' using encoding 'sequential' in module 'DCP_L'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE1 |                              001 |                         00000000
+                  iSTATE |                              010 |                         00000001
+                 iSTATE0 |                              100 |                         00000010
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'one-hot' in module 'DCP'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 8     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 3     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 19    
+	   2 Input    1 Bit       Adders := 9     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 12    
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 3     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 5     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 30    
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 48    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 25    
+	   4 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 2     
+	   8 Input   32 Bit        Muxes := 6     
+	  23 Input   32 Bit        Muxes := 1     
+	   6 Input   32 Bit        Muxes := 2     
+	   7 Input   32 Bit        Muxes := 1     
+	   5 Input   32 Bit        Muxes := 1     
+	   9 Input   32 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 2     
+	   7 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
+	   3 Input    8 Bit        Muxes := 1     
+	  18 Input    8 Bit        Muxes := 2     
+	   9 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 38    
+	   4 Input    7 Bit        Muxes := 12    
+	   6 Input    7 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 9     
+	   6 Input    6 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 42    
+	   5 Input    5 Bit        Muxes := 21    
+	   2 Input    5 Bit        Muxes := 22    
+	  64 Input    5 Bit        Muxes := 1     
+	  22 Input    5 Bit        Muxes := 1     
+	   8 Input    5 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 43    
+	   4 Input    4 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 9     
+	   3 Input    4 Bit        Muxes := 42    
+	  11 Input    4 Bit        Muxes := 1     
+	  10 Input    3 Bit        Muxes := 1     
+	  13 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 14    
+	   7 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 3     
+	  21 Input    3 Bit        Muxes := 10    
+	   4 Input    3 Bit        Muxes := 42    
+	  23 Input    3 Bit        Muxes := 9     
+	  22 Input    3 Bit        Muxes := 9     
+	  16 Input    3 Bit        Muxes := 1     
+	   3 Input    3 Bit        Muxes := 1     
+	  11 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	  10 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 21    
+	   5 Input    2 Bit        Muxes := 21    
+	   7 Input    2 Bit        Muxes := 1     
+	  10 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 3     
+	   5 Input    1 Bit        Muxes := 4     
+	   2 Input    1 Bit        Muxes := 62    
+	   8 Input    1 Bit        Muxes := 36    
+	   9 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 11    
+	   6 Input    1 Bit        Muxes := 14    
+	   7 Input    1 Bit        Muxes := 20    
+	  21 Input    1 Bit        Muxes := 15    
+	  23 Input    1 Bit        Muxes := 17    
+	  22 Input    1 Bit        Muxes := 20    
+	  11 Input    1 Bit        Muxes := 7     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:41 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|DCP_P       | type_tx_P  | 32x1          | LUT            | 
+|DCP_G       | type_tx_G  | 32x1          | LUT            | 
+|DCP_P       | type_tx_P  | 32x1          | LUT            | 
+|DCP_G       | type_tx_G  | 32x1          | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------+-----------+----------------------+--------------+
+|SDU_top     | CPU/u_Reg/rf_reg | Implied   | 32 x 32              | RAM32M x 18  | 
++------------+------------------+-----------+----------------------+--------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:46 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:47 . Memory (MB): peak = 1368.773 ; gain = 44.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+------------------+-----------+----------------------+--------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives   | 
++------------+------------------+-----------+----------------------+--------------+
+|SDU_top     | CPU/u_Reg/rf_reg | Implied   | 32 x 32              | RAM32M x 18  | 
++------------+------------------+-----------+----------------------+--------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:49 . Memory (MB): peak = 1418.453 ; gain = 93.848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |data_mem      |         1|
+|2     |inst_mem      |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |data_mem |     1|
+|2     |inst_mem |     1|
+|3     |BUFG     |     3|
+|4     |CARRY4   |    88|
+|5     |LUT1     |    14|
+|6     |LUT2     |   258|
+|7     |LUT3     |   269|
+|8     |LUT4     |   222|
+|9     |LUT5     |   427|
+|10    |LUT6     |  1401|
+|11    |MUXF7    |    45|
+|12    |MUXF8    |     3|
+|13    |RAM32M   |    15|
+|14    |RAM32X1D |     6|
+|15    |FDCE     |   458|
+|16    |FDPE     |   104|
+|17    |FDRE     |    95|
+|18    |FDSE     |     7|
+|19    |IBUF     |     3|
+|20    |OBUF     |    17|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:50 . Memory (MB): peak = 1431.184 ; gain = 62.410
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:53 . Memory (MB): peak = 1431.184 ; gain = 106.578
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1443.211 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 157 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1446.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 21 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 15 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+Synth Design complete, checksum: 3bed589b
+INFO: [Common 17-83] Releasing license: Synthesis
+120 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:59 . Memory (MB): peak = 1446.867 ; gain = 122.262
+INFO: [Common 17-1381] The checkpoint 'F:/COD_Projects/LABH4/LABH4.runs/synth_1/SDU_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file SDU_top_utilization_synth.rpt -pb SDU_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May  8 16:05:11 2023...
