@@ -1,0 +1,119 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed May 24 10:29:56 2023
+| Host         : Melmaphother running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file MAIN_control_sets_placed.rpt
+| Design       : MAIN
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    41 |
+|    Minimum number of control sets                        |    41 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   101 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    41 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |    17 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     6 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    16 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             371 |          197 |
+| No           | No                    | Yes                    |              47 |           22 |
+| No           | Yes                   | No                     |               4 |            2 |
+| Yes          | No                    | No                     |             132 |           61 |
+| Yes          | No                    | Yes                    |             177 |           79 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------+---------------------------------------------------------------------------------------------------------------+----------------------------+------------------+----------------+--------------+
+|      Clock Signal     |                                                 Enable Signal                                                 |      Set/Reset Signal      | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------+---------------------------------------------------------------------------------------------------------------+----------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG        |                                                                                                               | sdu/rstn                   |                1 |              1 |         1.00 |
+|  clk_153600_BUFG      |                                                                                                               |                            |                1 |              1 |         1.00 |
+|  sdu/dcp/print/hex__0 |                                                                                                               | sdu/dcp/hex_reg[3]_i_2_n_0 |                2 |              4 |         2.00 |
+|  clk_153600_BUFG      | sdu/dcp/print/cnt                                                                                             |                            |                1 |              4 |         4.00 |
+|  clk_153600_BUFG      | sdu/dcp/scan/cnt                                                                                              |                            |                3 |              4 |         1.33 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[7]                                                                                        |                            |                3 |              4 |         1.33 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[14]                                                                                       | sdu/rstn                   |                2 |              4 |         2.00 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[22]                                                                                       | sdu/rstn                   |                2 |              4 |         2.00 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[26]                                                                                       | sdu/rstn                   |                1 |              4 |         4.00 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[9]                                                                                        | sdu/rstn                   |                2 |              4 |         2.00 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[18]                                                                                       | sdu/rstn                   |                3 |              4 |         1.33 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[0]                                                                                        |                            |                1 |              4 |         4.00 |
+|  clk_153600_BUFG      | sdu/dcp/scan/p_2_in[30]                                                                                       | sdu/rstn                   |                2 |              4 |         2.00 |
+|  clk_153600_BUFG      | sdu/rx/cnt1[3]_i_1_n_0                                                                                        |                            |                1 |              4 |         4.00 |
+|  clk_153600_BUFG      | sdu/tx/cnt2[3]_i_1__0_n_0                                                                                     |                            |                1 |              4 |         4.00 |
+|  clk_153600_BUFG      | sdu/tx/cnt1[3]_i_1__0_n_0                                                                                     |                            |                2 |              4 |         2.00 |
+|  clk_153600_BUFG      | sdu/dcp/p_cnt[4]_i_1_n_0                                                                                      | sdu/rstn                   |                2 |              5 |         2.50 |
+|  clk_153600_BUFG      | sdu/dcp/d_cnt[4]_i_1_n_0                                                                                      | sdu/rstn                   |                1 |              5 |         5.00 |
+|  clk_153600_BUFG      | sdu/dcp/print/Q[1]                                                                                            | sdu/rstn                   |                3 |              5 |         1.67 |
+|  clk_153600_BUFG      | sdu/dcp/r_cnt[7]_i_1_n_0                                                                                      | sdu/rstn                   |                3 |              8 |         2.67 |
+|  clk_153600_BUFG      | sdu/rx/d_rx0                                                                                                  | sdu/rstn                   |                2 |              8 |         4.00 |
+|  clk_153600_BUFG      | rstn_IBUF                                                                                                     |                            |                5 |              8 |         1.60 |
+|  clk_153600_BUFG      | sdu/tx/store_0                                                                                                | sdu/rstn                   |                3 |              8 |         2.67 |
+|  clk_153600_BUFG      | sdu/dcp/p_ptr[8]_i_1_n_0                                                                                      | sdu/rstn                   |                6 |              9 |         1.50 |
+|  clk_153600_BUFG      | sdu/dcp/r_ptr[8]_i_1_n_0                                                                                      | sdu/rstn                   |                3 |              9 |         3.00 |
+|  cpu_clk_BUFG         | u_CPU/u_IDEX/p_0_in                                                                                           |                            |               19 |             32 |         1.68 |
+|  clk_153600_BUFG      | sdu/dcp/save_ra0                                                                                              | sdu/rstn                   |               16 |             32 |         2.00 |
+|  clk_153600_BUFG      | sdu/dcp/dra00                                                                                                 | sdu/rstn                   |               18 |             32 |         1.78 |
+|  clk_IBUF_BUFG        | fd/counter[31]_i_1_n_0                                                                                        | sdu/rstn                   |               10 |             32 |         3.20 |
+|  clk_153600_BUFG      |                                                                                                               | sdu/rstn                   |               21 |             46 |         2.19 |
+|  cpu_clk_BUFG         | u_CPU/u_IDEX/IDEX_MemRead_reg_0                                                                               |                            |               25 |             64 |         2.56 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_0_127_0_0_i_1_n_0    |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_128_255_0_0_i_1_n_0  |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_256_383_0_0_i_1_n_0  |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_384_511_0_0_i_1_n_0  |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_512_639_0_0_i_1_n_0  |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_640_767_0_0_i_1_n_0  |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_768_895_0_0_i_1_n_0  |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_Data_Mem/u_data_mem/U0/synth_options.dist_mem_inst/gen_dp_ram.dpram_inst/ram_reg_896_1023_0_0_i_1_n_0 |                            |               32 |            128 |         4.00 |
+|  cpu_clk_BUFG         | u_CPU/u_MEMWB/p_0_in                                                                                          |                            |               17 |            132 |         7.76 |
+|  cpu_clk_BUFG         |                                                                                                               |                            |              452 |           1394 |         3.08 |
++-----------------------+---------------------------------------------------------------------------------------------------------------+----------------------------+------------------+----------------+--------------+
+
+

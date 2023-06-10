@@ -1,0 +1,27 @@
+CPU u_CPU(
+    .cpu_clk(cpu_clk),         // cpu时钟
+    .cpu_rstn(cpu_rstn),       // cpu的rstn
+    .dra0(dra0),               // 存储器读地址
+    .drd0(drd0),               // 存储器读数据
+    .rra0(rra0),               // 寄存器堆读地址
+    .rrd0(rrd0),               // 寄存器堆读数据
+    /* ***以下根据需要修改*** */
+    .ctr_debug(ctr_debug),     // 总控制线
+    .npc(npc),                 // next_pc
+    .pc(pc),                   // IF段的pc
+    .ir(ir),                   // IF段的指令
+    .pc_id(pc_id),             // ID段的pc
+    .ir_id(ir_id),             // ID段的指令
+    .pc_ex(pc_ex),             // EX段的pc
+    .ir_ex(ir_ex),             // EX段的指令
+    .rrd1(rrd1),               // 寄存器输出端1
+    .rrd2(rrd2),               // 寄存器输出端2
+    .imm(imm),                 // 初始生成的立即数（也就是在ID段的立即数）
+    .ir_mem(ir_mem),           // MEM段的指令
+    .res(res),                 // EX段ALU的计算结果
+    .dwd(dwd),                 // MEM段存储器要写的数据
+    .ir_wb(ir_wb),             // WB段的指令
+    .res_wb(res_wb),           // （从EX到MEM一步步传来的）WB段ALU的计算结果（用于前递）
+    .drd(drd),                 // （从MEM段传的）WB段的存储器要写的数据（用于前递）
+    .rwd(rwd)                  // 经过mux之后要写进寄存器堆的数据
+);

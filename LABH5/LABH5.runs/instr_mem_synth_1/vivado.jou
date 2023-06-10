@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Wed May 24 10:27:51 2023
+# Process ID: 11148
+# Current directory: D:/COD_Projects/LABH5/LABH5.runs/instr_mem_synth_1
+# Command line: vivado.exe -log instr_mem.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source instr_mem.tcl
+# Log file: D:/COD_Projects/LABH5/LABH5.runs/instr_mem_synth_1/instr_mem.vds
+# Journal file: D:/COD_Projects/LABH5/LABH5.runs/instr_mem_synth_1\vivado.jou
+# Running On: Melmaphother, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+source instr_mem.tcl -notrace

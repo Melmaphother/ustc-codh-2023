@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../LABH5.gen/sources_1/ip/clk_wiz_0" \
+"CPU_tb_func_synth.v" \
+"../../../../../LABH5.srcs/sources_1/new/ALU.v" \
+"../../../../../LABH5.srcs/sources_1/new/ALUA_Gen.v" \
+"../../../../../LABH5.srcs/sources_1/new/ALUB_Gen.v" \
+"../../../../../LABH5.srcs/sources_1/new/Branch_Cond.v" \
+"../../../../../LABH5.srcs/sources_1/new/CPU.v" \
+"../../../../../LABH5.srcs/sources_1/new/Control.v" \
+"../../../../../LABH5.srcs/sources_1/new/Data_Mem.v" \
+"../../../../../LABH5.srcs/sources_1/new/Decode.v" \
+"../../../../../LABH5.srcs/sources_1/new/EXMEM.v" \
+"../../../../../LABH5.srcs/sources_1/new/Forward.v" \
+"../../../../../LABH5.srcs/sources_1/new/Hazard.v" \
+"../../../../../LABH5.srcs/sources_1/new/IDEX.v" \
+"../../../../../LABH5.srcs/sources_1/new/IFID.v" \
+"../../../../../LABH5.srcs/sources_1/new/Imm_Gen.v" \
+"../../../../../LABH5.srcs/sources_1/new/Instr_Mem.v" \
+"../../../../../LABH5.srcs/sources_1/new/MEMWB.v" \
+"../../../../../LABH5.srcs/sources_1/new/MUX_2_1.v" \
+"../../../../../LABH5.srcs/sources_1/new/MUX_3_1.v" \
+"../../../../../LABH5.srcs/sources_1/new/PC.v" \
+"../../../../../LABH5.srcs/sources_1/new/Registers.v" \
+"../../../../../LABH5.srcs/sources_1/new/npc_Gen.v" \
+"../../../../../LABH5.srcs/sim_1/new/CPU_tb.v" \
+
+# Do not sort compile order
+nosort
