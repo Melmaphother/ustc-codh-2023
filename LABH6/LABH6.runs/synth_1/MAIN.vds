@@ -1,0 +1,833 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Jun 10 22:20:29 2023
+# Process ID: 14640
+# Current directory: D:/COD_Projects/LABH6/LABH6.runs/synth_1
+# Command line: vivado.exe -log MAIN.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MAIN.tcl
+# Log file: D:/COD_Projects/LABH6/LABH6.runs/synth_1/MAIN.vds
+# Journal file: D:/COD_Projects/LABH6/LABH6.runs/synth_1\vivado.jou
+# Running On: Melmaphother, OS: Windows, CPU Frequency: 2918 MHz, CPU Physical cores: 14, Host memory: 34071 MB
+#-----------------------------------------------------------
+source MAIN.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental D:/COD_Projects/LABH6/LABH6.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/COD_Projects/LABH6/LABH6.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top MAIN -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 456
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1308.020 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'MAIN' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/MAIN.v:2]
+INFO: [Synth 8-6157] synthesizing module 'udf_FD' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/FD.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'udf_FD' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/FD.v:4]
+INFO: [Synth 8-6157] synthesizing module 'SDU' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SDU.v:2]
+INFO: [Synth 8-6157] synthesizing module 'RX' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/RX.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'RX' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/RX.v:3]
+INFO: [Synth 8-6157] synthesizing module 'TX' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/TX.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'TX' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/TX.v:2]
+INFO: [Synth 8-6157] synthesizing module 'DCP' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:2]
+INFO: [Synth 8-6157] synthesizing module 'SCAN' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:2]
+INFO: [Synth 8-6157] synthesizing module 'CHAR2HEX' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'CHAR2HEX' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:93]
+INFO: [Synth 8-6155] done synthesizing module 'SCAN' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:2]
+INFO: [Synth 8-6157] synthesizing module 'PRINT' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/PRINT.v:2]
+INFO: [Synth 8-6157] synthesizing module 'HEX2CHAR' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/PRINT.v:119]
+INFO: [Synth 8-6155] done synthesizing module 'HEX2CHAR' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/PRINT.v:119]
+INFO: [Synth 8-6155] done synthesizing module 'PRINT' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/PRINT.v:2]
+WARNING: [Synth 8-7071] port 'newline' of module 'PRINT' is unconnected for instance 'print' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:125]
+WARNING: [Synth 8-7023] instance 'print' of module 'PRINT' has 10 connections declared, but only 9 given [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:125]
+INFO: [Synth 8-6157] synthesizing module 'ROM_INFO' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/ROM.v:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_FILE bound to: state.txt - type: string 
+INFO: [Synth 8-3876] $readmem data file 'state.txt' is read successfully [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/ROM.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_INFO' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/ROM.v:2]
+INFO: [Synth 8-6157] synthesizing module 'ROM_INFO__parameterized0' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/ROM.v:2]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter INIT_FILE bound to: reg.txt - type: string 
+INFO: [Synth 8-3876] $readmem data file 'reg.txt' is read successfully [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/ROM.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'ROM_INFO__parameterized0' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/ROM.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'DCP' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'SDU' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SDU.v:2]
+WARNING: [Synth 8-7071] port 'LED' of module 'SDU' is unconnected for instance 'sdu' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/MAIN.v:49]
+WARNING: [Synth 8-7023] instance 'sdu' of module 'SDU' has 29 connections declared, but only 28 given [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/MAIN.v:49]
+INFO: [Synth 8-6157] synthesizing module 'CPU' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/CPU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PC' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'PC' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/PC.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Instr_Mem' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Instr_Mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'instr_mem' [D:/COD_Projects/LABH6/LABH6.runs/synth_1/.Xil/Vivado-14640-Melmaphother/realtime/instr_mem_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'instr_mem' (0#1) [D:/COD_Projects/LABH6/LABH6.runs/synth_1/.Xil/Vivado-14640-Melmaphother/realtime/instr_mem_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'Instr_Mem' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Instr_Mem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IFID' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IFID.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IFID' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IFID.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Decode' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Decode.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Decode' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Decode.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Control' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Control' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Control.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Registers' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Registers.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Registers' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Registers.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Imm_Gen' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Imm_Gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Imm_Gen' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Imm_Gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IDEX' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IDEX.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'IDEX' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IDEX.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALUA_Gen' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/ALUA_Gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX_3_1' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/MUX_3_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_3_1' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/MUX_3_1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MUX_2_1' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/MUX_2_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MUX_2_1' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/MUX_2_1.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALUA_Gen' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/ALUA_Gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALUB_Gen' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/ALUB_Gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ALUB_Gen' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/ALUB_Gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/ALU.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/ALU.v:20]
+INFO: [Synth 8-6157] synthesizing module 'Branch_Cond' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Branch_Cond.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Branch_Cond.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'Branch_Cond' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Branch_Cond.v:23]
+INFO: [Synth 8-6157] synthesizing module 'npc_Gen' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/npc_Gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'npc_Gen' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/npc_Gen.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Forward' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Forward.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Forward' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Forward.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Hazard' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Hazard.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Hazard' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Hazard.v:23]
+INFO: [Synth 8-6157] synthesizing module 'EXMEM' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/EXMEM.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'EXMEM' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/EXMEM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'mem_and_mmio' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/mem_and_mmio.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Dcache' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:23]
+	Parameter GROUP_ADDR_LEN bound to: 0 - type: integer 
+	Parameter TAG_LEN bound to: 2 - type: integer 
+	Parameter INDEX_ADDR_LEN bound to: 6 - type: integer 
+	Parameter LINEWORD_ADDR_LEN bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:149]
+INFO: [Synth 8-6157] synthesizing module 'DataMem' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:23]
+	Parameter TAG_LEN bound to: 2 - type: integer 
+	Parameter INDEX_ADDR_LEN bound to: 6 - type: integer 
+	Parameter LINEWORD_ADDR_LEN bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:81]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:142]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [D:/COD_Projects/LABH6/LABH6.runs/synth_1/.Xil/Vivado-14640-Melmaphother/realtime/blk_mem_gen_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (0#1) [D:/COD_Projects/LABH6/LABH6.runs/synth_1/.Xil/Vivado-14640-Melmaphother/realtime/blk_mem_gen_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'Mem_sdu' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Mem_sdu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Mem_sdu' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Mem_sdu.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'DataMem' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Dcache' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mem_and_mmio' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/mem_and_mmio.v:23]
+INFO: [Synth 8-6157] synthesizing module 'MEMWB' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/MEMWB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MEMWB' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/MEMWB.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'CPU' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/CPU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'IOU' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IOU.v:23]
+INFO: [Synth 8-6157] synthesizing module 'DB' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DB.v:3]
+	Parameter max bound to: 24'b000000000010010110000000 
+INFO: [Synth 8-6155] done synthesizing module 'DB' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DB.v:3]
+INFO: [Synth 8-6157] synthesizing module 'PS' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/PS.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'PS' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/PS.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DB__parameterized0' [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DB.v:3]
+	Parameter max bound to: 24'b000000000000110010000000 
+INFO: [Synth 8-6155] done synthesizing module 'DB__parameterized0' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DB.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IOU.v:122]
+INFO: [Synth 8-226] default block is never used [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IOU.v:310]
+INFO: [Synth 8-226] default block is never used [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IOU.v:352]
+INFO: [Synth 8-6155] done synthesizing module 'IOU' (0#1) [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/IOU.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'MAIN' (0#1) [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/MAIN.v:2]
+WARNING: [Synth 8-7137] Register cnt2_reg in module RX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/RX.v:31]
+WARNING: [Synth 8-7137] Register cnt1_reg in module RX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/RX.v:36]
+WARNING: [Synth 8-7137] Register rdy_tx_reg in module TX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/TX.v:24]
+WARNING: [Synth 8-7137] Register cnt1_reg in module TX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/TX.v:18]
+WARNING: [Synth 8-7137] Register cnt2_reg in module TX has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/TX.v:40]
+WARNING: [Synth 8-7137] Register cnt_reg in module SCAN has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:40]
+WARNING: [Synth 8-7137] Register din_rx_reg in module SCAN has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:43]
+WARNING: [Synth 8-7137] Register flag_rx_reg in module SCAN has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/SCAN.v:63]
+WARNING: [Synth 8-7137] Register cnt_reg in module PRINT has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/PRINT.v:53]
+WARNING: [Synth 8-7137] Register req_rx_reg in module DCP has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:119]
+WARNING: [Synth 8-7137] Register req_tx_reg in module DCP has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:133]
+WARNING: [Synth 8-7137] Register rec_rx_reg in module DCP has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:154]
+WARNING: [Synth 8-7137] Register rec_tx_reg in module DCP has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/DCP.v:158]
+WARNING: [Synth 8-7137] Register wr_addr_reg in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:101]
+WARNING: [Synth 8-7137] Register wr_word_reg in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:102]
+WARNING: [Synth 8-7137] Register rd_delay_reg in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:146]
+WARNING: [Synth 8-7137] Register rd_count_reg in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:132]
+WARNING: [Synth 8-7137] Register rd_line_reg[0] in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:48]
+WARNING: [Synth 8-7137] Register rd_line_reg[1] in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:48]
+WARNING: [Synth 8-7137] Register rd_line_reg[2] in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:48]
+WARNING: [Synth 8-7137] Register rd_line_reg[3] in module DataMem has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/DataMem.v:48]
+WARNING: [Synth 8-5856] 3D RAM Cache_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  Cache_reg 
+WARNING: [Synth 8-7137] Register Cache_reg[0][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[0][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[0][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[0][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[1][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[1][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[1][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[1][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[2][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[2][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[2][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[2][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[3][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[3][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[3][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[3][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[4][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[4][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[4][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[4][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[5][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[5][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[5][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[5][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[6][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[6][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[6][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[6][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[7][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[7][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[7][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[7][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[8][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[8][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[8][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[8][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[9][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[9][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[9][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[9][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[10][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[10][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[10][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[10][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[11][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[11][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[11][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[11][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[12][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[12][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[12][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[12][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[13][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[13][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[13][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[13][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[14][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[14][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[14][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[14][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[15][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[15][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[15][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[15][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[16][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[16][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[16][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[16][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[17][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[17][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[17][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[17][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[18][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[18][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[18][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[18][3] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[19][0] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[19][1] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+WARNING: [Synth 8-7137] Register Cache_reg[19][2] in module Dcache has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/COD_Projects/LABH6/LABH6.srcs/sources_1/new/Dcache.v:142]
+INFO: [Common 17-14] Message 'Synth 8-7137' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-4767] Trying to implement RAM 'Dirty_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "Dirty_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'CacheTag_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "CacheTag_reg" dissolved into registers
+WARNING: [Synth 8-4767] Trying to implement RAM 'Valid_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
+Reason is one or more of the following :
+	1: RAM is sensitive to asynchronous reset signal. this RTL style is not supported. 
+RAM "Valid_reg" dissolved into registers
+WARNING: [Synth 8-7129] Port addr_sdu[31] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[30] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[29] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[28] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[27] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[26] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[25] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[24] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[23] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[22] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[21] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[20] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[19] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[18] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[17] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[16] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[15] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[14] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[13] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[12] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[11] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[10] in module Mem_sdu is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[1] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[0] in module Dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[6] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[5] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[4] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[3] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[2] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[1] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port instr[0] in module Imm_Gen is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opcode[1] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port opcode[0] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[6] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[4] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[3] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[2] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[1] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port func7[0] in module Control is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[31] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[30] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[29] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[28] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[27] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[26] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[25] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[24] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[23] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[22] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[21] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[20] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[19] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[18] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[17] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[16] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[15] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[14] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[13] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[12] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[11] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr[10] in module Instr_Mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module ROM_INFO__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clk in module ROM_INFO is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.609 ; gain = 39.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.609 ; gain = 39.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1347.609 ; gain = 39.590
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.124 . Memory (MB): peak = 1347.609 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/COD_Projects/LABH6/LABH6.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_CPU/u_mem_and_mmio/u_Dcache/u_DataMem/u_blk_mem_gen_0'
+Finished Parsing XDC File [d:/COD_Projects/LABH6/LABH6.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'u_CPU/u_mem_and_mmio/u_Dcache/u_DataMem/u_blk_mem_gen_0'
+Parsing XDC File [d:/COD_Projects/LABH6/LABH6.gen/sources_1/ip/instr_mem/instr_mem/instr_mem_in_context.xdc] for cell 'u_CPU/u_Instr_Mem/u_inst_mem'
+Finished Parsing XDC File [d:/COD_Projects/LABH6/LABH6.gen/sources_1/ip/instr_mem/instr_mem/instr_mem_in_context.xdc] for cell 'u_CPU/u_Instr_Mem/u_inst_mem'
+Parsing XDC File [D:/COD_Projects/LABH6/LABH6.srcs/constrs_1/new/LABH6_xdc.xdc]
+Finished Parsing XDC File [D:/COD_Projects/LABH6/LABH6.srcs/constrs_1/new/LABH6_xdc.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/COD_Projects/LABH6/LABH6.srcs/constrs_1/new/LABH6_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/MAIN_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/MAIN_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1440.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1440.188 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for u_CPU/u_mem_and_mmio/u_Dcache/u_DataMem/u_blk_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_CPU/u_Instr_Mem/u_inst_mem. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'RX'
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'TX'
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'SCAN'
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'PRINT'
+INFO: [Synth 8-802] inferred FSM for state register 'cs_reg' in module 'DCP'
+INFO: [Synth 8-802] inferred FSM for state register 'wr_state_reg' in module 'DataMem'
+INFO: [Synth 8-802] inferred FSM for state register 'rd_state_reg' in module 'DataMem'
+INFO: [Synth 8-802] inferred FSM for state register 'cache_state_reg' in module 'Dcache'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                               00 |                              000
+                   CHECK |                               01 |                              001
+                    CNT1 |                               10 |                              010
+                    CNT2 |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'sequential' in module 'RX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                               00 |                               00
+                    CNT1 |                               01 |                               01
+                    CNT2 |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'sequential' in module 'TX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                           000001 |                              000
+                  WAITRX |                           000010 |                              001
+                     CNT |                           000100 |                              010
+                    VOID |                           001000 |                              101
+                   WRITE |                           010000 |                              011
+                     ACK |                           100000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'SCAN'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    WAIT |                          0000001 |                              000
+                  WAITTX |                          0000010 |                              001
+                   SENDR |                          0000100 |                              101
+                   SENDN |                          0001000 |                              110
+                     CNT |                          0010000 |                              010
+                    SEND |                          0100000 |                              011
+                     ACK |                          1000000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'PRINT'
+WARNING: [Synth 8-327] inferring latch for variable 'hex_reg' [D:/COD_Projects/LABH6/SDU_PL-v2_wzc/PRINT.v:29]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                     REQ | 00000000000000000000000000001000 |                         00000000
+               G_RUNACLK | 00000000000000000000000000010000 |                         10000010
+               G_BPCHECK | 00000000000000000000000000000001 |                         10000011
+                   PARSE | 00000000000000000000000000000100 |                         00000001
+              D_DELSPACE | 00000000000010000000000000000000 |                         00000010
+              D_SCANADDR | 00000000000000100000000000000000 |                         00000011
+               D_GETADDR | 00000000000001000000000000000000 |                         00000100
+                D_PRINTD | 01000000000000000000000000000000 |                         00000101
+              D_PRINTBAR | 00010000000000000000000000000000 |                         00000110
+             D_PRINTADDR | 00000100000000000000000000000000 |                         00000111
+            D_PRINTCOLON | 00001000000000000000000000000000 |                         00001000
+                   D_CNT | 00000000000000000000000001000000 |                         00001001
+                D_PRINTR | 00000000001000000000000000000000 |                         00010000
+                D_PRINTN | 00000000000100000000000000000000 |                         00010001
+                   D_END | 00000000000000000010000000000000 |                         00010010
+               D_READMEM | 00000001000000000000000000000000 |                         00001011
+               D_WAITMEM | 00000000000000000000000010000000 |                         00001100
+            D_PRINTSPACE | 00000000000000000000000100000000 |                         00001110
+             D_PRINTDATA | 10000000000000000000000000000000 |                         00001111
+               D_ADDADDR | 00000000000000000000000000100000 |                         00001101
+                 R_START | 00000000000000000100000000000000 |                         01000010
+                   R_CNT | 00000000000000000000100000000000 |                         01000011
+               R_PRTINFO | 00000000000000000001000000000000 |                         01000100
+             R_PRINTDATA | 00000010000000000000000000000000 |                         01000110
+             R_PRINTCHAR | 00100000000000000000000000000000 |                         01000101
+               T_RUNACLK | 00000000100000000000000000000000 |                         01100010
+                  H_HALT | 00000000010000000000000000000000 |                         10100010
+                 P_START | 00000000000000000000000000000010 |                         00100010
+                   P_CNT | 00000000000000000000010000000000 |                         00100011
+               P_PRTINFO | 00000000000000010000000000000000 |                         00100100
+             P_PRINTDATA | 00000000000000000000001000000000 |                         00100110
+             P_PRINTCHAR | 00000000000000001000000000000000 |                         00100101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cs_reg' using encoding 'one-hot' in module 'DCP'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 RD_IDLE |                               00 |                              000
+                RD_DELAY |                               01 |                              001
+             RD_FROM_MEM |                               10 |                              010
+            RD_HANDSHAKE |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rd_state_reg' using encoding 'sequential' in module 'DataMem'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 WR_IDLE |                               00 |                              000
+                WR_DELAY |                               01 |                              001
+               WR_TO_MEM |                               10 |                              010
+            WR_HANDSHAKE |                               11 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wr_state_reg' using encoding 'sequential' in module 'DataMem'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                             0001 |                              000
+                SWAP_OUT |                             0010 |                              001
+                 SWAP_IN |                             0100 |                              010
+          WRITE_TO_CACHE |                             1000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'cache_state_reg' using encoding 'one-hot' in module 'Dcache'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 5     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 16    
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 5     
+	   2 Input    4 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 3     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
+	   2 Input      1 Bit         XORs := 18    
++---Registers : 
+	               32 Bit    Registers := 294   
+	               24 Bit    Registers := 18    
+	               20 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                9 Bit    Registers := 2     
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 8     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 67    
+	                1 Bit    Registers := 241   
++---RAMs : 
+	             1024 Bit	(32 X 32 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 67    
+	  13 Input   32 Bit        Muxes := 1     
+	  32 Input   32 Bit        Muxes := 1     
+	   7 Input   32 Bit        Muxes := 1     
+	   4 Input   32 Bit        Muxes := 13    
+	   2 Input   28 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 16    
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 12    
+	   3 Input    8 Bit        Muxes := 3     
+	   7 Input    8 Bit        Muxes := 1     
+	  32 Input    8 Bit        Muxes := 2     
+	   8 Input    8 Bit        Muxes := 1     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 14    
+	   6 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 10    
+	   4 Input    6 Bit        Muxes := 1     
+	   4 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 7     
+	   4 Input    4 Bit        Muxes := 3     
+	   3 Input    4 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 8     
+	   6 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	  10 Input    4 Bit        Muxes := 1     
+	  17 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 3     
+	  10 Input    3 Bit        Muxes := 1     
+	  13 Input    3 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 10    
+	   4 Input    2 Bit        Muxes := 5     
+	  10 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 452   
+	   4 Input    1 Bit        Muxes := 276   
+	   3 Input    1 Bit        Muxes := 13    
+	  10 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 2     
+	   9 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port addr_sdu[31] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[30] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[29] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[28] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[27] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[26] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[25] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[24] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[23] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[22] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[21] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[20] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[19] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[18] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[17] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[16] in module DataMem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port addr_sdu[15] in module DataMem is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (dcp/print/FSM_onehot_cs_reg[3]) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/print/FSM_onehot_cs_reg[2]) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[7]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[7]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[6]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[6]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[5]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[5]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[4]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[4]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[3]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[3]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[2]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[2]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[1]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[1]_C) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[0]_LDC) is unused and will be removed from module SDU.
+WARNING: [Synth 8-3332] Sequential element (dcp/scan/din_rx_reg[0]_C) is unused and will be removed from module SDU.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|ROM_INFO    | rom        | 512x8         | LUT            | 
+|ROM_INFO    | rom        | 512x8         | LUT            | 
+|ROM_INFO    | p_0_out    | 512x8         | LUT            | 
+|ROM_INFO    | p_0_out    | 512x8         | LUT            | 
++------------+------------+---------------+----------------+
+
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------------------------------------+-----------------------+-----------+----------------------+---------------+
+|Module Name                               | RTL Object            | Inference | Size (Depth x Width) | Primitives    | 
++------------------------------------------+-----------------------+-----------+----------------------+---------------+
+|u_CPU                                     | u_Registers/rf_reg    | Implied   | 32 x 32              | RAM32M x 18   | 
+|u_CPU/\u_mem_and_mmio/u_Dcache /u_DataMem | u_Mem_sdu/Mem_sdu_reg | Implied   | 1 K x 32             | RAM64M x 176  | 
++------------------------------------------+-----------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1440.188 ; gain = 132.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------------------------------------+-----------------------+-----------+----------------------+---------------+
+|Module Name                               | RTL Object            | Inference | Size (Depth x Width) | Primitives    | 
++------------------------------------------+-----------------------+-----------+----------------------+---------------+
+|u_CPU                                     | u_Registers/rf_reg    | Implied   | 32 x 32              | RAM32M x 18   | 
+|u_CPU/\u_mem_and_mmio/u_Dcache /u_DataMem | u_Mem_sdu/Mem_sdu_reg | Implied   | 1 K x 32             | RAM64M x 176  | 
++------------------------------------------+-----------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1452.504 ; gain = 144.484
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|MAIN        | u_IOU/genblk1[0].PS_x/delay2_reg | 3      | 16    | NO           | NO                 | YES               | 16     | 0       | 
+|MAIN        | u_IOU/PS_data/delay2_reg         | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|MAIN        | u_IOU/PS_del/delay2_reg          | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+----------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |instr_mem     |         1|
+|2     |blk_mem_gen_0 |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |blk_mem_gen |     1|
+|2     |instr_mem   |     1|
+|3     |BUFG        |     3|
+|4     |CARRY4      |   140|
+|5     |LUT1        |    56|
+|6     |LUT2        |   382|
+|7     |LUT3        |   595|
+|8     |LUT4        |   434|
+|9     |LUT5        |   817|
+|10    |LUT6        |  4174|
+|11    |MUXF7       |  1254|
+|12    |MUXF8       |   573|
+|13    |RAM32M      |    15|
+|14    |RAM32X1D    |     6|
+|15    |RAM64M      |   176|
+|16    |SRL16E      |    18|
+|17    |FDCE        |   188|
+|18    |FDPE        |    51|
+|19    |FDRE        |  1632|
+|20    |FDSE        |  8192|
+|21    |LDC         |     4|
+|22    |IBUF        |    21|
+|23    |OBUF        |    32|
++------+------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1462.020 ; gain = 154.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 83 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:43 . Memory (MB): peak = 1462.020 ; gain = 61.422
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1462.020 ; gain = 154.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.127 . Memory (MB): peak = 1474.098 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2168 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1479.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 201 instances were transformed.
+  LDC => LDCE: 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 15 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+  RAM64M => RAM64M (RAMD64E(x4)): 176 instances
+
+Synth Design complete, checksum: 464dd1b8
+INFO: [Common 17-83] Releasing license: Synthesis
+132 Infos, 229 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1479.734 ; gain = 171.715
+INFO: [Common 17-1381] The checkpoint 'D:/COD_Projects/LABH6/LABH6.runs/synth_1/MAIN.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file MAIN_utilization_synth.rpt -pb MAIN_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun 10 22:21:23 2023...
