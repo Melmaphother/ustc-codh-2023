@@ -80,7 +80,7 @@
 
 - 测试结果分析
   
-  ![](F:\COD_Projects\LABH3\labh3图片\测试完成.png)
+  ![](LABH3图片\测试完成.png)
   
   `t5`是最后完成的标志，当`t5`为`1`时表示所有指令测试结果正确。
 
@@ -88,12 +88,10 @@
   
   排序开始：
   
-  ![](F:\COD_Projects\LABH3\labh3图片\排序开始.png)
+  ![](LABH3图片\排序开始.png)
   
   排序结束:
   
-  ![](F:\COD_Projects\LABH3\labh3图片\排序结束.png)
+  ![](LABH3图片/排序结束.png)
   
   可以看到，排序结果是正确的。
-
-# 

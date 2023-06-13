@@ -24,7 +24,7 @@
   
   所以状态机为：
   
-  <img title="" src="file:///E:/COD_Projects/LABH1/LABH1图片/LABH1状态机图.png" alt="" width="318">
+  <img title="" src="LABH1图片/LABH1状态机图.png" alt="" width="318">
 
 - 核心代码分析
   
@@ -90,11 +90,11 @@
 
 - ALU仿真结果
   
-  ![](E:\COD_Projects\LABH1\LABH1图片\ALU仿真结果.png)
+  ![](LABH1图片\ALU仿真结果.png)
 
 - MAV仿真结果
   
-  ![](E:\COD_Projects\LABH1\LABH1图片\MAV仿真结果.png)
+  ![](LABH1图片\MAV仿真结果.png)
 
 - 结果分析
   
@@ -104,13 +104,13 @@
 
 - 完整`RTL`电路图
   
-  <img src="file:///E:/COD_Projects/LABH1/LABH1图片/RTL1.png" title="" alt="" width="553">
+  <img src="LABH1图片/RTL1.png" title="" alt="" width="553">
   
-  <img src="file:///E:/COD_Projects/LABH1/LABH1图片/RTL2.png" title="" alt="" width="553">
+  <img src="LABH1图片/RTL2.png" title="" alt="" width="553">
 
 - 资源使用情况
   
-  ![](E:\COD_Projects\LABH1\LABH1图片\资源使用情况.png)
+  ![](LABH1图片\资源使用情况.png)
   
   可以看出`WNS`为正数。
 
@@ -122,26 +122,24 @@
   
   - 输入$2$：
     
-    <img src="file:///E:/COD_Projects/LABH1/LABH1图片/结果1.png" title="" alt="" width="371">
+    <img src="LABH1图片/结果1.png" title="" alt="" width="371">
   
   - 输入$3$：
     
-    <img src="file:///E:/COD_Projects/LABH1/LABH1图片/结果2.png" title="" alt="" width="374">
+    <img src="LABH1图片/结果2.png" title="" alt="" width="374">
   
   - 输入$4$：
     
-    <img src="file:///E:/COD_Projects/LABH1/LABH1图片/结果3.jpg" title="" alt="" width="376">
+    <img src="LABH1图片/结果3.jpg" title="" alt="" width="376">
   
   - 输入$5$：计算出$3,4,5,6$的平均数为$3$。
     
-    <img title="" src="file:///E:/COD_Projects/LABH1/LABH1图片/结果4.jpg" alt="" width="378">
+    <img title="" src="LABH1图片/结果4.jpg" alt="" width="378">
   
   - 输入$6$：计算出$4,5,6,7$的平均数为$4$。
     
-    <img title="" src="file:///E:/COD_Projects/LABH1/LABH1图片/结果5.jpg" alt="" width="381">
+    <img title="" src="LABH1图片/结果5.jpg" alt="" width="381">
   
   - 输入`rstn`：
     
-    <img title="" src="file:///E:/COD_Projects/LABH1/LABH1图片/结果6.jpg" alt="" width="383">
-
-# 
+    <img title="" src="LABH1图片/结果6.jpg" alt="" width="383">
