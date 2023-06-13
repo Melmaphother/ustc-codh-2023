@@ -40,6 +40,10 @@ module mem_and_mmio(
     //Debug
     ,input [31: 0] addr_sdu,
     output [31: 0] data_sdu
+
+    // count miss
+    ,output reg [31: 0] count_wr_rd_req,
+    output reg [31: 0] count_cache_miss
     );
 /////////////////////////////////////////////////////////////////////////////
     /*
@@ -77,10 +81,10 @@ module mem_and_mmio(
     assign io_rd   = MemRead  & is_mmio;
 
     Dcache #(
-    .GROUP_ADDR_LEN    (0    ),
+    .WAY_ADDR_LEN      (0    ),
     .TAG_LEN           (2    ),
-    .INDEX_ADDR_LEN    (6    ),
-    .LINEWORD_ADDR_LEN (2    )
+    .INDEX_ADDR_LEN    (5    ),
+    .LINEWORD_ADDR_LEN (3    )
     )
     u_Dcache(
         .clk      (clk              ),
@@ -96,5 +100,45 @@ module mem_and_mmio(
         ,.addr_sdu  (addr_sdu),
         .data_sdu   (data_sdu)
     );
+
+/////////////////////////////////////////////////////////////////////////
+    // cache miss计数
+    reg [31: 0] pre_wr_rd_req;
+    reg [31: 0] pre_cache_miss;
+    always @(posedge clk, negedge rstn) begin
+        if(!rstn) begin
+            pre_wr_rd_req <= 0;
+        end
+        else begin
+            pre_wr_rd_req <= MemRead | MemWrite;
+        end
+    end
+    always @(posedge clk, negedge rstn) begin
+        if(!rstn) begin
+            pre_cache_miss <= 0;
+        end
+        else begin
+            pre_cache_miss <= miss;
+        end
+    end
+
+    always @(posedge clk, negedge rstn) begin
+        if(!rstn) begin
+            count_wr_rd_req <= 0;
+        end
+        else if(~pre_wr_rd_req & (MemRead | MemWrite) & is_cache)begin
+            count_wr_rd_req <= count_wr_rd_req + 32'b1;
+        end
+    end
+
+    always @(posedge clk, negedge rstn) begin
+        if(!rstn) begin
+            count_cache_miss <= 0;
+        end
+        else if(~pre_cache_miss & miss & is_cache) begin
+            count_cache_miss <= count_cache_miss + 32'b1;
+        end
+    end
+/////////////////////////////////////////////////////////////////////////
 
 endmodule

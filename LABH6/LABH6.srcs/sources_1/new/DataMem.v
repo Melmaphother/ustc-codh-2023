@@ -163,7 +163,7 @@ module DataMem #(
                         end
                     end
                     else begin
-                        rd_line[rd_count_2[LINEWORD_ADDR_LEN - 1: 0]] <= rd_word;        // 此时read_count == LINEWORD_SIZE
+                        rd_line[rd_count_2[LINEWORD_ADDR_LEN - 1: 0]] <= rd_word;        // 此时rd_count == LINEWORD_SIZE
                         rd_state <= RD_HANDSHAKE;
                     end
                 end

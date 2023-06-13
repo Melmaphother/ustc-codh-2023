@@ -98,27 +98,46 @@ Clean_Dirty:
     addi t5, x0, 8
     sw t5, 0x00(t0)   # a mark means finish sorting all numbers, LED[3] is lighting
 
-    addi a0, x0, 64  # cache has 64 lines
+    addi a1, x0, 64  # cache has 64 lines
     addi t1, x0, 2
     slli t1, t1, 12  # t1 = 0x0000_2000 (the addr of the first number)
     Loop2:    
         lw t2, 0(t1)
         addi t1, t1, 0x10   # t1 = 0x0000_2010
-        addi a0, a0, -1
-        beq  a0, x0, PRINT
-        jal  a1, Loop2
+        addi a1, a1, -1
+        beq  a1, x0, PRINT
+        jal  a2, Loop2
 
 
 PRINT:
     sub a4, a6, a5
 
-    addi a0, x0, 1     # a0 = 1
+    addi a1, x0, 1     # a0 = 1
 Check_Out1:
     lw  t1, 0x08(t0)
-    beq t1, a0, Out1   # if seg_rdy == 1 jump to Out1
+    beq t1, a1, Out1   # if seg_rdy == 1 jump to Out1
     jal a1, Check_Out1
 Out1:
     sw  a4, 0x0C(t0)        # DISP output
 
+
+    # a0 is also the size of the array
+    addi a1, x0, 2
+    slli a1, a1, 12  # a1 = 0x0000_2000 (the addr of the first number)
+Check_SORT:
+    addi a0, a0, -1
+    beq a0, x0, True
+    lw  t1, 0(a1)
+    lw  t2, 4(a1)
+    blt t2, t1, Error   # t2 < t1 Error
+    addi a1, a1, 4
+    jal Check_SORT
+True:
+    addi t1, x0, 16
+    sw t1, 0x00(t0)   # a mark means sorting numbers true, LED[4] is lighting
+    jal t2, End
+Error:
+    addi t1, x0, 32
+    sw t2, 0x00(t0)   # a mark means sorting numbers error, LED[5] is lighting
 End: 
-    jal x1, End
+    jal t1, End

@@ -21,25 +21,25 @@
 
 
 module Dcache #(
-    parameter GROUP_ADDR_LEN = 0,                       // 组地址长度，表明一共2^GROUP_ADDR_LEN个组
+    parameter WAY_ADDR_LEN = 0,                         // 组地址长度，表明一共2 ^ WAY_ADDR_LEN个组
     parameter TAG_LEN = 2,                              // tag长度
     parameter INDEX_ADDR_LEN = 6,                       // 行数地址长度(即cache index的长度)
-    parameter LINEWORD_ADDR_LEN = 2,                    // 一行的地址长度(即offset的长度 - 2)，表明一行中一共有2^LINE_ADDR_LEN个字
-    parameter MEM_ADDR_LEN = TAG_LEN + INDEX_ADDR_LEN   // 由于memory是按块读写，所以只需要TAG和INDEX的组合就够区分读写地址了 = ;
+    parameter LINEWORD_ADDR_LEN = 2,                    // 一行的地址长度(即offset的长度 - 2)，表明一行中一共有2 ^ LINE_ADDR_LEN个字
+    parameter MEM_ADDR_LEN = TAG_LEN + INDEX_ADDR_LEN   // 由于memory是按块读写，所以只需要TAG和INDEX的组合就够区分读写地址了;
     )(
     /*
         对于4KB的数据存储器，在按字节寻址的方式下
-        相当于4K * 1B，也就是2^12 * 1B，有效地址只有12位
+        相当于4K * 1B，也就是2 ^ 12 * 1B，有效地址只有12位
         故上述变量需要满足
         12 = TAG_LEN + INDEX_ADDR_LEN + LINEWORD_ADDR_LEN + 2
-        GROUP_ADDR_LE每多一位，INDEX_ADDR_LEN少一位，TAG_LEN多一位
+        WAY_ADDR_LEN每多一位，INDEX_ADDR_LEN少一位，TAG_LEN多一位
     */
     /*
         对于固定总容量1KB的缓存中，在按字节寻址的方式
         相当于1K * 1B，也就是2^10 * 1B
         故上述变量需要满足
         LINEWORD_ADDR_LEN + 2 + INDEX_ADDR_LEN = 10
-        缓存是2^(LINEWORD_ADDR_LEN + 2) * 2 ^ INDEX_ADDR_LEN的
+        缓存是2 ^ (LINEWORD_ADDR_LEN + 2) * 2 ^ INDEX_ADDR_LEN的
     */
     input          clk,
     input          rstn,
@@ -67,9 +67,9 @@ module Dcache #(
     wire                                          mem_rd_req;
     wire  [                  MEM_ADDR_LEN - 1: 0] mem_addr;
 ////////////////////////////////////////////////////////
-    localparam GROUP_SIZE = 1 << GROUP_ADDR_LEN;          // 组数
-    localparam INDEX_SIZE = 1 << INDEX_ADDR_LEN;          // 每组行数
-    localparam LINEWORD_SIZE = 1 << LINEWORD_ADDR_LEN;    // 一行的字数
+    localparam WAY_SIZE = 1 << WAY_ADDR_LEN;              // 组数(1)
+    localparam INDEX_SIZE = 1 << INDEX_ADDR_LEN;          // 每组行数(64)
+    localparam LINEWORD_SIZE = 1 << LINEWORD_ADDR_LEN;    // 一行的字数(4)
     localparam WORD_SIZE = 32;                            // 每字对应4字节，即32bits
     localparam UNUSED_ADDR_LEN = 20;                      // 有20位无效
 
@@ -93,11 +93,11 @@ module Dcache #(
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
     // 拆分输入地址
-    wire [UNUSED_ADDR_LEN - 1: 0] unused_addr;
-    wire [TAG_LEN - 1: 0] tag_addr;
-    wire [INDEX_ADDR_LEN - 1: 0] index_addr;
+    wire [  UNUSED_ADDR_LEN - 1: 0] unused_addr;
+    wire [          TAG_LEN - 1: 0] tag_addr;
+    wire [   INDEX_ADDR_LEN - 1: 0] index_addr;
     wire [LINEWORD_ADDR_LEN - 1: 0] lineword_addr;
-    wire [2 - 1: 0] word_addr;
+    wire [                2 - 1: 0] word_addr;
     assign {unused_addr, tag_addr, index_addr, lineword_addr, word_addr} = addr - 32'h0000_2000;
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
@@ -208,9 +208,9 @@ module Dcache #(
 /////////////////////////////////////////////////////////
 
     DataMem #(
-        .TAG_LEN           (2           ),
-        .INDEX_ADDR_LEN    (6           ),
-        .LINEWORD_ADDR_LEN (2           )
+        .TAG_LEN           (TAG_LEN              ),
+        .INDEX_ADDR_LEN    (INDEX_ADDR_LEN       ),
+        .LINEWORD_ADDR_LEN (LINEWORD_ADDR_LEN    )
     )
     u_DataMem(
     	.clk                (clk                ),
@@ -221,8 +221,9 @@ module Dcache #(
         .wr_req             (mem_wr_req         ),
         .rd_req             (mem_rd_req         ),
         .mem_addr           (mem_addr           )
-        ,.addr_sdu         (addr_sdu),
-        .data_sdu          (data_sdu)
+        ,.addr_sdu          (addr_sdu),
+        .data_sdu           (data_sdu)
     );
-    
+
+
 endmodule

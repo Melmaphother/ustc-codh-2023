@@ -16,7 +16,7 @@ Start:
 
     Loop:
         addi t2, t2, -1
-        beq  t2, x0, PRINT        # if t2 == 0,jump to end
+        beq  t2, x0, SORT        # if t2 == 0,jump to end
         addi t4, x0, 0x1          # t4 = 0x1
 
         slli t4, t4, 7            # t4 = 0x0000_0080
@@ -69,17 +69,32 @@ Next_Outer:
 Clean_Dirty:
 
 
-    addi a0, x0, 64  # cache has 64 lines
+    addi a1, x0, 64  # cache has 64 lines
     addi t1, x0, 2
     slli t1, t1, 12  # t1 = 0x0000_2000 (the addr of the first number)
     Loop2:    
         lw t2, 0(t1)
         addi t1, t1, 0x10   # t1 = 0x0000_2010
-        addi a0, a0, -1
-        beq  a0, x0, PRINT
-        jal  a1, Loop2
+        addi a1, a1, -1
+        beq  a1, x0, PRINT
+        jal  a2, Loop2
 
+CHECK:
+    addi a1, x0, 2
+    slli a1, a1, 12  # a1 = 0x0000_2000 (the addr of the first number)
+Check_SORT:
+    addi a0, a0, -1
+    beq a0, x0, True
+    lw  t1, 0(a1)
+    lw  t2, 4(a1)
+    blt t2, t1, Error   # t2 < t1 Error
+    addi a1, a1, 4
+    jal Check_SORT
+True:
+    addi t1, x0, 16
+    jal t2, PRINT
+Error:
+    addi t1, x0, 32
 
 PRINT:
-	jal x1, PRINT
 
